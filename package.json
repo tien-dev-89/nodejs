@@ -4,7 +4,7 @@
   "main": "src/index.js",
   "scripts": {
     "beautiful": "lint-staged",
-    "start": "nodemon --inspect --watch src/index.js",
+    "start": "nodemon --inspect --watch src src/index.js",
     "watch": "sass src/resources/scss:src/public/css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,7 +21,7 @@
   "lint-staged": {
     "src/**/*.{js,json,scss}": "prettier --write --single-quote --trailing-comma all --tab-width 4"
   },
-  "husky":{
+  "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
@@ -30,6 +30,9 @@
   "dependencies": {
     "express": "^4.21.2",
     "express-handlebars": "^8.0.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.11.0",
+    "mongoose-slug-generator": "^1.0.4",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
